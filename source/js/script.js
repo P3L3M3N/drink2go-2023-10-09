@@ -17,3 +17,25 @@ toggle.addEventListener('click', function() {
         menuName.textContent = 'Закрыть основное меню';
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.promo__card');
+  let currentSlide = 0;
+
+  function showSlide(slideIndex) {
+      slides[currentSlide].classList.remove('active');
+      slides[slideIndex].classList.add('active');
+      currentSlide = slideIndex;
+  }
+
+  document.querySelectorAll('.promo__button').forEach(button => {
+      button.addEventListener('click', function() {
+          const direction = this.classList.contains('promo__button--next') ? 1 : -1;
+          const newSlide = (currentSlide + direction + slides.length) % slides.length;
+          showSlide(newSlide);
+      });
+  });
+
+  slides[currentSlide].classList.add('active');
+});
