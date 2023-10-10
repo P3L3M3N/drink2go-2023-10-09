@@ -7,21 +7,20 @@
   <title>Drink2Go - Интернет-магазин кофейных напиткова</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="/fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="/fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="/fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/Montserrat-Italic.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/Montserrat-BoldItalic.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
-  <header class="header" id="main">
+  <header class="page-header" id="main-page">
     <nav class="navigation">
       <div class="navigation-wrapper">
-        <a class="navigation-logo-link" href="#main">
-          <img class="navigation-logo-image" src="images/logo/logotype-mobile.svg" width="32" height="36"
-            alt="Логотип Drink2Go.">
-        </a>
+        <div class="navigation-logo">
+          <a class="navigation-logo__link" href="#main">
+            <img class="navigation-logo__image" src="images/logo/logotype-mobile.svg" width="32" height="36"
+              alt="Логотип Drink2Go.">
+          </a>
+        </div>
         <div class="user-menu-wrapper">
           <ul class="user-menu">
             <li class="user-menu__item">
@@ -60,13 +59,12 @@
                 d="M7.02548 8L2 2.97452L2.97452 2L8 7.02548L13.0255 2L14 2.97452L8.97452 8L14 13.0255L13.0255 14L8 8.97452L2.97452 14L2 13.0255L7.02548 8Z"
                 fill="#333333" />
             </svg>
-        </button>
-
+          </button>
         </div>
       </div>
       <ul class="main-menu-list">
         <li class="main-menu-list__item">
-          <a class="main-menu-list__link" href="#main">Главная</a>
+          <a class="main-menu-list__link" href="#main-page">Главная</a>
         </li>
         <li class="main-menu-list__item">
           <a class="main-menu-list__link" href="#catalog">Каталог</a>
@@ -81,7 +79,82 @@
     </nav>
   </header>
 
-  <main></main>
+  <main class="main-content">
+    <h1 class="visually-hidden">Drink2Go - Интернет-магазин кофейных напиткова</h1>
+    <section class="promo">
+      <h2 class="visually-hidden">Новинки Drink2Go</h2>
+      <ul class="promo__list slider">
+        <li class="promo__card promo__card--flat-white slider__item">
+          <div class="promo-card">
+            <img class="promo-card__image" src="images/flat-white-mobile.png" width="280" height="280"
+              alt="Декаф Флэт Уайт.">
+            <div class="promo-card__info">
+              <span class="promo-card__subtitle">Новинка!</span>
+              <h3 class="promo-card__title">Декаф Флэт Уайт</h3>
+              <p class="promo-card__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным<br> фермерским
+                молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <div class="promo-card__order-wrapper">
+                <del class="promo-card__old-price">295₽</del>
+                <span class="promo-card__new-price">225₽</span>
+                <a class="promo-card__button button" href="#">Заказать</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="promo__card promo__card--lavender slider__item">
+          <div class="promo-card">
+            <img class="promo-card__image" src="images/lavender-mobile.png" width="280" height="280"
+              alt="Лавандовый Латте.">
+            <div class="promo-card__info">
+              <span class="promo-card__subtitle">Новинка!</span>
+              <h3 class="promo-card__title">Лавандовый Латте</h3>
+              <p class="promo-card__description">Невероятное сочетание перуанской высокогорной арабики<br> с молоком ламы и
+                лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+              <div class="promo-card__order-wrapper">
+                <del class="promo-card__old-price">285₽</del>
+                <span class="promo-card__new-price">265₽</span>
+                <a class="promo-card__button button" href="#">Заказать</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="promo__card promo__card--espresso slider__item">
+          <div class="promo-card">
+            <img class="promo-card__image" src="images/espresso-mobile.png" width="280" height="280"
+              alt="Тройной Эспрессо.">
+            <div class="promo-card__info">
+              <span class="promo-card__subtitle">Новинка!</span>
+              <h3 class="promo-card__title">Тройной Эспрессо</h3>
+              <p class="promo-card__description">Мощнее укола адреналина, чернее самой тёмной ночи,<br> этот тройной
+                эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+              <div class="promo-card__order-wrapper">
+                <del class="promo-card__old-price">395₽</del>
+                <span class="promo-card__new-price">365₽</span>
+                <a class="promo-card__button button" href="#">Заказать</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button class="promo__button promo__button--back slider-button" type="button">
+        <span class="slider-button__name visually-hidden">Предыдущий слайд</span>
+        <svg class="slider-button__icon" width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M9.71661 0L11 1.32082L2.56677 10L11 18.6792L9.71661 20L0 10L9.71661 0Z" fill="#7859CF" />
+        </svg>
+      </button>
+      <button class="promo__button promo__button--next slider-button" type="button">
+        <span class="slider-button__name visually-hidden">Следующий слайд</span>
+        <svg class="slider-button__icon" width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M1.28339 0L0 1.32082L8.43323 10L0 18.6792L1.28339 20L11 10L1.28339 0Z" fill="#7859CF" />
+        </svg>
+      </button>
+      <div class="promo__pagination"></div>
+    </section>
+
+  </main>
+
 
   <footer></footer>
 
