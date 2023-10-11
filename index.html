@@ -12,11 +12,42 @@
 </head>
 
 <body class="page__body">
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
+    <svg fill="none" id="basket" viewBox="0 0 16 16" width="16" height="16">
+      <path fill="#333" fill-rule="evenodd"
+        d="m5.66 3.875.234 2.792h4.213l.232-2.792a2.347 2.347 0 1 0-4.678 0Zm5.784 2.792.224-2.68a3.68 3.68 0 1 0-7.336 0l.224 2.68H0L.19 8l.816 5.71A2.667 2.667 0 0 0 3.646 16h8.708a2.667 2.667 0 0 0 2.64-2.29L15.81 8 16 6.667h-4.556ZM11.334 8h-.054l-.222 2.667h3.024L14.462 8h-3.129ZM9.941 8H6.058l.222 2.667h3.44L9.942 8ZM4.72 8H1.537l.381 2.667h3.024L4.72 8Zm1.893 6.667L6.391 12H9.61l-.222 2.667H6.613ZM10.947 12l-.222 2.667h1.629c.663 0 1.226-.488 1.32-1.145L13.89 12h-2.944Zm-5.894 0 .222 2.667H3.646a1.333 1.333 0 0 1-1.32-1.145L2.11 12h2.944Z"
+        clip-rule="evenodd"></path>
+    </svg>
+    <svg fill="none" id="burger" viewBox="0 0 16 16" width="16" height="16">
+      <path fill="#333" fill-rule="evenodd" d="M0 2h16v1.5H0V2Zm0 5.25h16v1.5H0v-1.5Zm16 5.25H0V14h16v-1.5Z"
+        clip-rule="evenodd"></path>
+    </svg>
+    <svg fill="none" id="cross" viewBox="0 0 16 16" width="16" height="16">
+      <path fill="#333" fill-rule="evenodd"
+        d="M7.025 8 2 2.975 2.975 2 8 7.025 13.025 2l.975.975L8.975 8 14 13.025l-.975.975L8 8.975 2.975 14 2 13.025 7.025 8Z"
+        clip-rule="evenodd"></path>
+    </svg>
+    <svg fill="none" id="login" viewBox="0 0 16 16" width="16" height="16">
+      <path fill="#333" fill-rule="evenodd"
+        d="M10.667 4a2.667 2.667 0 1 1-5.334 0 2.667 2.667 0 0 1 5.334 0ZM12 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-8.803 8.31C4.437 11.277 6.16 10.667 8 10.667s3.564.61 4.803 1.643c1.232 1.027 1.864 2.362 1.864 3.69H16c0-1.768-.843-3.464-2.343-4.714-1.5-1.25-3.535-1.953-5.657-1.953s-4.157.703-5.657 1.953S0 14.232 0 16h1.333c0-1.328.632-2.663 1.864-3.69Z"
+        clip-rule="evenodd"></path>
+    </svg>
+    <svg fill="none" id="slider-arrow-back" viewBox="0 0 20 20" width="20" height="20">
+      <path fill="#7859CF" fill-rule="evenodd" d="M13.717 0 15 1.32 6.567 10 15 18.68 13.717 20 4 10l9.717-10Z"
+        clip-rule="evenodd"></path>
+    </svg>
+    <svg fill="none" id="slider-arrow-next" viewBox="0 0 20 20"  width="20" height="20">
+      <path fill="#7859CF" fill-rule="evenodd" d="M6.283 0 5 1.32 13.433 10 5 18.68 6.283 20 16 10 6.283 0Z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </svg>
+
   <header class="page-header" id="main-page">
     <nav class="navigation">
       <div class="navigation-wrapper">
         <div class="navigation-logo">
-          <a class="navigation-logo__link" href="#main">
+          <a class="navigation-logo__link" href="#main-page">
             <img class="navigation-logo__image" src="images/logo/logotype-mobile.svg" width="32" height="36"
               alt="Логотип Drink2Go.">
           </a>
@@ -25,39 +56,28 @@
           <ul class="user-menu">
             <li class="user-menu__item">
               <a class="user-menu__login-link" href="#login">
-                <svg class="user-menu__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M10.6667 4C10.6667 5.47276 9.47276 6.66667 8 6.66667C6.52724 6.66667 5.33333 5.47276 5.33333 4C5.33333 2.52724 6.52724 1.33333 8 1.33333C9.47276 1.33333 10.6667 2.52724 10.6667 4ZM12 4C12 6.20914 10.2091 8 8 8C5.79086 8 4 6.20914 4 4C4 1.79086 5.79086 0 8 0C10.2091 0 12 1.79086 12 4ZM3.19673 12.3102C4.43611 11.2774 6.1613 10.6667 8 10.6667C9.8387 10.6667 11.5639 11.2774 12.8033 12.3102C14.0354 13.337 14.6667 14.6719 14.6667 16H16C16 14.2321 15.1573 12.5363 13.6569 11.286C12.1566 10.0357 10.1218 9.33333 8 9.33333C5.87821 9.33333 3.8434 10.0357 2.34315 11.286C0.842686 12.5363 0 14.2321 0 16L1.33333 16C1.33333 14.6719 1.96465 13.337 3.19673 12.3102Z"
-                    fill="#333333" />
+                <svg class="user-menu__icon" width="16" height="16" viewBox="0 0 16 16">
+                  <use href="#login"></use>
                 </svg>
                 <span class="user-menu__name visually-hidden">Войти</span>
               </a>
             </li>
             <li class="user-menu__item">
               <a class="user-menu__basket-link" href="#basket">
-                <svg class="user-menu__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M5.66091 3.87546L5.89351 6.66667H10.1065L10.3391 3.87546C10.4531 2.50699 9.37321 1.33333 8 1.33333C6.6268 1.33333 5.54687 2.50699 5.66091 3.87546ZM11.4444 6.66667L11.6678 3.98618C11.8466 1.84036 10.1533 0 8 0C5.84674 0 4.15336 1.84036 4.33218 3.98618L4.55556 6.66667H1.34687H0L0.190476 8L1.00626 13.7105C1.19393 15.0242 2.31905 16 3.64612 16H12.3539C13.6809 16 14.8061 15.0242 14.9937 13.7105L15.8095 8L16 6.66667H14.6531H11.4444ZM11.3333 8H11.2801L11.0579 10.6667H14.0817L14.4627 8H11.3333ZM9.94213 8H6.05787L6.28009 10.6667H9.71991L9.94213 8ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM10.9468 12L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219L13.8912 12H10.9468ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324Z"
-                    fill="#333333" />
+                <svg class="user-menu__icon" width="16" height="16" viewBox="0 0 16 16">
+                  <use href="#basket"></use>
                 </svg>
                 <span class="user-menu__name visually-hidden">Корзина</span>
               </a>
             </li>
           </ul>
           <button class="menu-toggle" type="button">
-            <span class="menu-toggle__name visually-hidden">Закрыть основное меню</span>
-            <svg class="menu-toggle__icon menu-toggle__icon--burger" width="16" height="16" viewBox="0 0 16 16"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M0 2H16V3.5H0V2ZM0 7.25H16V8.75H0V7.25ZM16 12.5H0V14H16V12.5Z" fill="#333333" />
+            <span class="menu-toggle__name visually-hidden">Открыть основное меню</span>
+            <svg class="menu-toggle__icon menu-toggle__icon--cross" width="16" height="16" viewBox="0 0 16 16">
+              <use href="#cross"></use>
             </svg>
-            <svg class="menu-toggle__icon menu-toggle__icon--cross" width="16" height="16" viewBox="0 0 16 16"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M7.02548 8L2 2.97452L2.97452 2L8 7.02548L13.0255 2L14 2.97452L8.97452 8L14 13.0255L13.0255 14L8 8.97452L2.97452 14L2 13.0255L7.02548 8Z"
-                fill="#333333" />
+            <svg class="menu-toggle__icon menu-toggle__icon--burger" width="16" height="16" viewBox="0 0 16 16">
+              <use href="#burger"></use>
             </svg>
           </button>
         </div>
@@ -80,18 +100,19 @@
   </header>
 
   <main class="main-content">
-    <h1 class="visually-hidden">Drink2Go - Интернет-магазин кофейных напиткова</h1>
+    <h1 class="main-content__title visually-hidden">Drink2Go - Интернет-магазин кофейных напиткова</h1>
+
     <section class="promo">
-      <h2 class="visually-hidden">Новинки Drink2Go</h2>
-      <ul class="promo__list slider">
-        <li class="promo__card promo__card--flat-white slider__item">
+      <h2 class="promo__title visually-hidden">Новинки</h2>
+      <ol class="promo__list">
+        <li class="promo__card promo__card--flat-white">
           <div class="promo-card">
             <img class="promo-card__image" src="images/flat-white-mobile.png" width="280" height="280"
               alt="Декаф Флэт Уайт.">
             <div class="promo-card__info">
-              <span class="promo-card__subtitle">Новинка!</span>
+              <span class="promo-card__label title">Новинка!</span>
               <h3 class="promo-card__title">Декаф Флэт Уайт</h3>
-              <p class="promo-card__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным<br> фермерским
+              <p class="promo-card__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским
                 молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
               <div class="promo-card__order-wrapper">
                 <del class="promo-card__old-price">295₽</del>
@@ -101,14 +122,14 @@
             </div>
           </div>
         </li>
-        <li class="promo__card promo__card--lavender slider__item">
+        <li class="promo__card promo__card--lavender">
           <div class="promo-card">
             <img class="promo-card__image" src="images/lavender-mobile.png" width="280" height="280"
               alt="Лавандовый Латте.">
             <div class="promo-card__info">
-              <span class="promo-card__subtitle">Новинка!</span>
+              <span class="promo-card__label title">Новинка!</span>
               <h3 class="promo-card__title">Лавандовый Латте</h3>
-              <p class="promo-card__description">Невероятное сочетание перуанской высокогорной арабики<br> с молоком ламы и
+              <p class="promo-card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
                 лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
               <div class="promo-card__order-wrapper">
                 <del class="promo-card__old-price">285₽</del>
@@ -118,14 +139,14 @@
             </div>
           </div>
         </li>
-        <li class="promo__card promo__card--espresso slider__item">
+        <li class="promo__card promo__card--espresso">
           <div class="promo-card">
             <img class="promo-card__image" src="images/espresso-mobile.png" width="280" height="280"
               alt="Тройной Эспрессо.">
             <div class="promo-card__info">
-              <span class="promo-card__subtitle">Новинка!</span>
+              <span class="promo-card__label title">Новинка!</span>
               <h3 class="promo-card__title">Тройной Эспрессо</h3>
-              <p class="promo-card__description">Мощнее укола адреналина, чернее самой тёмной ночи,<br> этот тройной
+              <p class="promo-card__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
                 эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
               <div class="promo-card__order-wrapper">
                 <del class="promo-card__old-price">395₽</del>
@@ -135,26 +156,46 @@
             </div>
           </div>
         </li>
-      </ul>
+      </ol>
       <button class="promo__button promo__button--back slider-button" type="button">
         <span class="slider-button__name visually-hidden">Предыдущий слайд</span>
-        <svg class="slider-button__icon" width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M9.71661 0L11 1.32082L2.56677 10L11 18.6792L9.71661 20L0 10L9.71661 0Z" fill="#7859CF" />
+        <svg class="slider-button__icon" width="20" height="20" viewBox="0 0 20 20">
+          <use href="#slider-arrow-back"></use>
         </svg>
       </button>
       <button class="promo__button promo__button--next slider-button" type="button">
         <span class="slider-button__name visually-hidden">Следующий слайд</span>
-        <svg class="slider-button__icon" width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M1.28339 0L0 1.32082L8.43323 10L0 18.6792L1.28339 20L11 10L1.28339 0Z" fill="#7859CF" />
+        <svg class="slider-button__icon" width="20" height="20" viewBox="0 0 20 20">
+          <use href="#slider-arrow-next"></use>
         </svg>
       </button>
       <div class="promo__pagination"></div>
     </section>
 
-  </main>
+    <section class="pros">
+      <h2 class="pros__title title">Преимущества</h2>
+      <h3 class="pros__subtitle">Главные причины выбрать Drink2Go</h3>
+      <ul class="pros__list">
+        <li class="pros__item pros__item--speed">
+          <h4 class="pros__item-title">Скорость</h4>
+          <p class="pros__item-text">Готовый напиток всегда под рукой — просто открой банку</p>
+        </li>
+        <li class="pros__item pros__item--comfort">
+          <h4 class="pros__item-title">Удобство</h4>
+          <p class="pros__item-text">Легко помещается и в карман, и в маленькую сумочку</p>
+        </li>
+        <li class="pros__item pros__item--vigor">
+          <h4 class="pros__item-title">Бодрость</h4>
+          <p class="pros__item-text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+        </li>
+        <li class="pros__item pros__item--eco">
+          <h4 class="pros__item-title">Экологичность</h4>
+          <p class="pros__item-text">Вся упаковка сделана из перерабатываемых материалов</p>
+        </li>
+      </ul>
+    </section>
 
+  </main>
 
   <footer></footer>
 
