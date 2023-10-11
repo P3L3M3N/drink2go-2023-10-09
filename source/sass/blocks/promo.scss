@@ -2,12 +2,6 @@
   position: relative;
 }
 
-.promo-card__image {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
-}
-
 .promo__list {
   list-style-type: none;
   margin: 0;
@@ -38,8 +32,9 @@
 
 .promo__button {
   position: absolute;
-  top: 50%;
-  background: none;
+  height: 100%;
+  top: 0;
+  background-color: transparent;
   border: none;
   padding: 0 5px 0 4px;
   cursor: pointer;

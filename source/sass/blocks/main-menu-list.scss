@@ -2,12 +2,15 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: center;
-  display: block;
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: $base-white;
+  z-index: 1000;
 }
 
 .main-menu-list__item {
-  padding: 18px;
+  padding: 20px;
   border-bottom: 1px solid $base-secondary;
 }
 
@@ -19,4 +22,8 @@
   text-transform: uppercase;
   color: inherit;
   text-decoration: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  line-height: 16px;
 }

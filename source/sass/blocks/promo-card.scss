@@ -1,18 +1,14 @@
-.promo-card__subtitle {
-  display: block;
-  margin-top: 10px;
-  color: $base-primary;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px;
-  letter-spacing: 0.48px;
-  text-transform: uppercase;
+.promo-card {
+  padding-top: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 60px;
 }
 
 .promo-card__title {
   margin: 0;
   margin-top: 4px;
-  padding: 0 10px;
+  padding: 0;
   font-size: 36px;
   font-weight: 700;
   line-height: 48px;
@@ -22,7 +18,7 @@
 .promo-card__description {
   margin: 0;
   margin-top: 10px;
-  padding: 0 12px;
+  padding: 0;
   font-size: 14px;
   line-height: 20px;
 }
@@ -33,7 +29,6 @@
   align-items: center;
   gap: 6px;
   margin-top: 20px;
-  padding-bottom: 60px;
 }
 
 .promo-card__old-price {
