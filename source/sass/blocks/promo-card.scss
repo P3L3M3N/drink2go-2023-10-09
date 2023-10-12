@@ -13,6 +13,10 @@
   font-weight: 700;
   line-height: 48px;
   letter-spacing: 0.72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 96px;
 }
 
 .promo-card__description {
@@ -21,6 +25,10 @@
   padding: 0;
   font-size: 14px;
   line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
 }
 
 .promo-card__order-wrapper {

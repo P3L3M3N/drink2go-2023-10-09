@@ -1,18 +1,23 @@
 /* GLOBAL */
-@import "global/variables.scss";
 @import "global/global.scss";
+@import "global/variables.scss";
 @import "global/fonts.scss";
 @import "global/visually-hidden.scss";
 
 /* BLOCKS */
-@import "blocks/page.scss";
-@import "blocks/navigation.scss";
-@import "blocks/user-menu.scss";
-@import "blocks/menu-toggle.scss";
-@import "blocks/main-menu-list.scss";
-@import "blocks/promo.scss";
-@import "blocks/promo-card.scss";
 @import "blocks/button.scss";
-@import "blocks/main-content.scss";
-@import "blocks/title.scss";
+@import "blocks/catalog.scss";
+@import "blocks/coffee-origin.scss";
+@import "blocks/filter.scss";
+@import "blocks/logo.scss";
+@import "blocks/main-menu-list.scss";
+@import "blocks/menu-toggle.scss";
+@import "blocks/milk-stock.scss";
+@import "blocks/navigation.scss";
+@import "blocks/page.scss";
+@import "blocks/price-range.scss";
+@import "blocks/promo-card.scss";
+@import "blocks/promo.scss";
 @import "blocks/pros.scss";
+@import "blocks/title.scss";
+@import "blocks/user-menu.scss";
