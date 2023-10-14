@@ -1,21 +1,42 @@
-.coffee-origin__label {
-  position: relative;
-  display: block;
-  padding-left: 54px;
-  cursor: pointer;
-
-  &:has(.coffee-origin__input:disabled) {
-    opacity: 0.25;
-    cursor: not-allowed;
+.coffee-origin {
+  .coffee-origin__label {
+    position: relative;
+    display: block;
+    padding-left: 54px;
+    cursor: pointer;
   }
-}
 
-.coffee-origin__input {
-  position: absolute;
-  left: 0;
-  opacity: 0;
+  .coffee-origin__input {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+  }
 
-  &:checked + .coffee-origin__checkbox {
+  .coffee-origin__checkbox {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 24px;
+    background-color: $base-grey;
+    border: 2px solid transparent;
+    border-radius: 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-color: $base-white;
+      border-radius: 50%;
+    }
+  }
+
+  .coffee-origin__input:checked ~ .coffee-origin__checkbox {
     background-color: $base-primary;
 
     &::before {
@@ -23,39 +44,28 @@
     }
   }
 
-  &:not(:disabled) + .coffee-origin__checkbox:hover,
-  &:not(:disabled) + .coffee-origin__checkbox:focus {
+  .coffee-origin__input:not(:disabled) ~ .coffee-origin__checkbox:hover {
     background-color: $primary-opacity-0-25;
     border-color: $primary-lighter;
   }
 
-  &:disabled:checked + .coffee-origin__checkbox {
+  .coffee-origin__input:disabled ~ .coffee-origin__checkbox,
+  .coffee-origin__input:disabled ~ .coffee-origin__name {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+
+  .coffee-origin__input:disabled:checked ~ .coffee-origin__checkbox {
     background-color: $base-grey;
 
     &::before {
       background-color: $base-black;
     }
   }
-}
 
-.coffee-origin__checkbox {
-  left: 0;
-  width: 42px;
-  height: 24px;
-  background-color: $base-grey;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  position: absolute;
-
-  &::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-color: $base-white;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+  .coffee-origin__input:disabled:not(:checked) ~ .coffee-origin__checkbox {
+    &::before {
+      background-color: $base-white;
+    }
   }
 }

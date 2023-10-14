@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $main-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  margin: 0 auto;
+  min-width: $mobile-width;
+  min-height: 100%;
+  color: $base-black;
+  background-color: $base-white;
+}
+
 img {
   max-width: 100%;
   height: auto;

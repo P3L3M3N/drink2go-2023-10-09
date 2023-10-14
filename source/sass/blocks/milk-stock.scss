@@ -1,70 +1,75 @@
-.milk-stock__label {
-  position: relative;
-  display: block;
-  padding-left: 34px;
-  cursor: pointer;
-
-  &:has(.milk-stock__input:disabled) {
-    opacity: 0.25;
-    cursor: not-allowed;
-  }
-}
-
-.milk-stock__input {
-  position: absolute;
-  left: 0;
-  opacity: 0;
-
-  &:not(:disabled):hover + .milk-stock__radio,
-  &:not(:disabled):focus + .milk-stock__radio {
-    border-color: $primary-lighter;
+.milk-stock {
+  .milk-stock__label {
+    position: relative;
+    display: block;
+    padding-left: 34px;
+    cursor: pointer;
   }
 
-  &:not(:disabled):hover + .milk-stock__radio::before,
-  &:not(:disabled):focus + .milk-stock__radio::before {
-    background-color: $base-primary;
-    opacity: 0.25;
+  .milk-stock__input {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  &:checked + .milk-stock__radio {
-    border-color: $base-primary;
+  .milk-stock__radio {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border: 2px solid $base-grey;
+    border-radius: 50%;
+    background-color: $base-white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      background-color: $base-primary;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
   }
 
-  &:checked + .milk-stock__radio::before,
-  &:checked:hover + .milk-stock__radio::before,
-  &:checked:focus + .milk-stock__radio::before {
-    opacity: 1;
-  }
-
-  &:disabled + .milk-stock__radio {
+  .milk-stock__input + .milk-stock__radio {
     border-color: $base-grey;
   }
 
-  &:disabled:checked + .milk-stock__radio::before {
-    background-color: $base-grey;
+  .milk-stock__input:checked + .milk-stock__radio {
+    border-color: $base-primary;
+
+    &::before {
+      opacity: 1;
+    }
   }
-}
 
-.milk-stock__radio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 24px;
-  border: 2px solid $base-grey;
-  border-radius: 50%;
-  background-color: $base-white;
+  .milk-stock__input:not(:disabled):hover + .milk-stock__radio {
+    border-color: $primary-lighter;
+  }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 16px;
-    height: 16px;
-    background-color: $base-primary;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
+  .milk-stock__input:checked:not(:disabled):hover + .milk-stock__radio::before {
+    background-color: $primary-opacity-0-25;
+  }
+
+  .milk-stock__input:disabled + .milk-stock__radio,
+  .milk-stock__input:disabled ~ .milk-stock__name {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+
+  .milk-stock__input:disabled + .milk-stock__radio {
+    border-color: $base-grey;
+
+    &::before {
+      background-color: $base-grey;
+    }
   }
 }

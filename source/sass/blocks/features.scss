@@ -1,0 +1,76 @@
+.features {
+  padding: 50px 20px 60px;
+  text-align: center;
+
+  .features__title {
+    margin: 0;
+  }
+
+  .features__list {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 36px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .features__item {
+    padding-top: 70px;
+    margin: 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 50px;
+      height: 56px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--speed::before {
+      background: url("/images/features/speed.svg") no-repeat;
+    }
+
+    &--comfort::before {
+      background: url("/images/features/comfort.svg") no-repeat;
+    }
+
+    &--vigor::before {
+      background: url("/images/features/vigor.svg") no-repeat;
+    }
+
+    &--eco::before {
+      background: url("/images/features/eco.svg") no-repeat;
+    }
+  }
+
+  .features__item-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .features__subtitle {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 4px;
+    min-height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features__item-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    min-height: 40px;
+  }
+}

@@ -1,42 +1,48 @@
-const toggle = document.querySelector('.menu-toggle');
-const menuList = document.querySelector('.main-menu-list');
-const burgerIcon = document.querySelector('.menu-toggle__icon--burger');
-const crossIcon = document.querySelector('.menu-toggle__icon--cross');
-const menuName = document.querySelector('.menu-toggle__name');
+// BURGER MENU
+const toggleButton = document.querySelector('.js-toggle-button');
+const headerMenu = document.querySelector('.header-menu');
+const burgerIcon = toggleButton.querySelector('.js-toggle-button__icon--burger');
+const crossIcon = toggleButton.querySelector('.js-toggle-button__icon--cross');
+const menuDescription = toggleButton.querySelector('.js-toggle-button__description');
 
-toggle.addEventListener('click', function() {
-    if (menuName.textContent === 'Открыть основное меню') {
-        menuList.style.display = 'block';
-        burgerIcon.style.display = 'none';
-        crossIcon.style.display = 'block';
-        menuName.textContent = 'Закрыть основное меню';
+toggleButton.setAttribute('aria-expanded', 'false');
+
+toggleButton.addEventListener('click', () => {
+    burgerIcon.classList.toggle('js-toggle-button__icon--active');
+    crossIcon.classList.toggle('js-toggle-button__icon--active');
+    headerMenu.classList.toggle('header-menu--active');
+
+    if (burgerIcon.classList.contains('js-toggle-button__icon--active')) {
+        menuDescription.textContent = 'Открыть основное меню';
+        toggleButton.setAttribute('aria-expanded', 'false');
     } else {
-        menuList.style.display = 'none';
-        burgerIcon.style.display = 'block';
-        crossIcon.style.display = 'none';
-        menuName.textContent = 'Открыть основное меню';
+        menuDescription.textContent = 'Закрыть основное меню';
+        toggleButton.setAttribute('aria-expanded', 'true');
     }
 });
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  const slides = document.querySelectorAll('.promo__card');
+// SLIDER
+document.addEventListener(`DOMContentLoaded`, () => {
+  const slides = document.querySelectorAll(`.hero__card`);
   let currentSlide = 0;
 
-  function showSlide(slideIndex) {
-      slides[currentSlide].classList.remove('active');
-      slides[slideIndex].classList.add('active');
-      currentSlide = slideIndex;
-  }
+  const showSlide = (index) => {
+    slides[currentSlide].classList.remove(`active`);
+    slides[index].classList.add(`active`);
+    currentSlide = index;
+  };
 
-  document.querySelectorAll('.promo__button').forEach(button => {
-      button.addEventListener('click', function() {
-          const direction = this.classList.contains('promo__button--next') ? 1 : -1;
-          const newSlide = (currentSlide + direction + slides.length) % slides.length;
-          showSlide(newSlide);
-      });
+  document.querySelector(`.slider__control--prev`).addEventListener(`click`, () => {
+    const newIndex = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(newIndex);
   });
 
-  slides[currentSlide].classList.add('active');
+  document.querySelector(`.slider__control--next`).addEventListener(`click`, () => {
+    const newIndex = (currentSlide + 1) % slides.length;
+    showSlide(newIndex);
+  });
+
+  slides[currentSlide].classList.add(`active`);
 });

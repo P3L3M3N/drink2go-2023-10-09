@@ -1,0 +1,31 @@
+.hero {
+  position: relative;
+
+  .hero__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+  }
+
+  .hero__card {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    &--flat-white {
+      background-color: $bg-flat-white;
+    }
+
+    &--lavender {
+      background-color: $bg-lavender-latte;
+    }
+
+    &--espresso {
+      background: $bg-espresso;
+    }
+  }
+}

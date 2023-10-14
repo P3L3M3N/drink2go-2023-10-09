@@ -1,0 +1,23 @@
+.slider {
+  .slider__control {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    background-color: transparent;
+    border: none;
+    padding: 0 5px 0 4px;
+    cursor: pointer;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
