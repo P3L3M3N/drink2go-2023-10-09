@@ -39,6 +39,16 @@
     &--arrow {
       padding: 15px 0;
     }
+
+    &.button--light:hover .arrow--prev::before,
+    &.button--light:focus .arrow--prev::before {
+      background-color: $base-white;
+    }
+
+    &.button--light:hover .arrow--next::before,
+    &.product-pagination__button.button--light:focus .arrow--next::before {
+      background-color: $base-white;
+    }
   }
 
   .product-pagination__direction {

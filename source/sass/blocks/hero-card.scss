@@ -19,7 +19,7 @@
   }
 
   .hero-card__description {
-    margin: 0;
+    margin: 0 auto;
     margin-top: 10px;
     padding: 0;
     font-size: 14px;
@@ -28,6 +28,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100px;
+    max-width: 650px;
   }
 
   .hero-card__order-wrapper {
