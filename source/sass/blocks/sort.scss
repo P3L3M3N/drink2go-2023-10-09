@@ -1,6 +1,5 @@
 .sort {
-  margin-top: 36px;
-  width: 100%;
+  margin-top: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,8 +22,7 @@
     cursor: pointer;
     white-space: nowrap;
     text-overflow: ellipsis;
-    height: 32px;
-    width: 165px;
     text-align: center;
+    font-weight: 600;
   }
 }
